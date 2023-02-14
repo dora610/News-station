@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="top-heading">
+    <h2>Top heading</h2>
+    <div class="headline-stories">
+      <div *ngFor="let newsStory of headlineStories;let i=index" class="story-card">
+        <h2 [class.main-story]="i===1">{{ newsStory.headline }}</h2>
+        <p>{{ newsStory.publishedOn }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos
+  sint fugiat nam, blanditiis veniam impedit voluptas! Harum, iure nostrum.
+</div>
