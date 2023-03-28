@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NewsCard } from 'src/app/models/NewsCard';
+import { HeadlineStroyServiceService } from 'src/app/services/headline-stroy-service.service';
 
 @Component({
   selector: 'app-homepage',
@@ -10,8 +11,12 @@ export class HomepageComponent {
 
   headlineStories!: NewsCard[];
 
+  constructor(private hlStroyServiceService: HeadlineStroyServiceService ){
+    this.headlineStories=hlStroyServiceService.getHeadlineStories();
+  }
+
   ngOnInit(){
-    this.headlineStories = [
+    /* this.headlineStories = [
       {
         headline: 'News Heading 1',
         publishedOn: new Date()
@@ -48,7 +53,7 @@ export class HomepageComponent {
         headline: 'News Heading 9',
         publishedOn: new Date()
       }
-    ]
+    ] */
   }
 
 }

@@ -1,19 +1,41 @@
 .headline-stories{
     display: grid;
-    grid-template-columns: repeat(4, minmax(10rem, 1fr));
-    grid-template-rows: repeat(3, minmax(14rem, 1fr));
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+    grid-template-rows: repeat(5, minmax(14rem, 1fr));
 
     .story-card{
         background-color: #CCCCCC;
         border: 1px solid #ededed;
-        // border-radius: 5%;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     }
 
-    .story-card:has(.main-story) {
+    .main-story-block{
+        background-color: coral;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    /* .story-card:has(.main-story-block) {
+        background-color: red;
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 3;
+    } */
+    
+
+    @media screen and (min-width: 760px) {
+        grid-template-columns: repeat(4, minmax(10rem, 1fr));
+        grid-template-rows: repeat(3, minmax(14rem, 1fr));
+
+        .main-story-block{
+            background-color: lightcyan;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
     }
 }
