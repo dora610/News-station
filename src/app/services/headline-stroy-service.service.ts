@@ -28,6 +28,8 @@ export class HeadlineStroyServiceService {
   }
 
   getHeadlineStories(): NewsCard[]{
+    console.log(this.headlineStories);
+    
     return this.headlineStories;
   }
 

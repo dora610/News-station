@@ -3,14 +3,7 @@
     grid-template-columns: repeat(2, minmax(10rem, 1fr));
     grid-template-rows: repeat(5, minmax(14rem, 1fr));
 
-    .story-card{
-        background-color: #CCCCCC;
-        border: 1px solid #ededed;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-    }
-
     .main-story-block{
-        background-color: coral;
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -31,7 +24,6 @@
         grid-template-rows: repeat(3, minmax(14rem, 1fr));
 
         .main-story-block{
-            background-color: lightcyan;
             grid-column-start: 2;
             grid-column-end: 4;
             grid-row-start: 1;

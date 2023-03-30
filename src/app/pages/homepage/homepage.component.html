@@ -2,19 +2,21 @@
   <div class="top-heading">
     <h2>Top heading</h2>
     <div class="headline-stories">
-      <!-- <div *ngFor="let hlStory of headlineStories;let i=index" [ngClass]="{'story-card': true,'main-story-block': i===1}">
-        <h2 [class.main-story]="i===1">{{ hlStory.headline }}</h2>
-        <p>{{ hlStory.publishedOn }}</p>
-      </div> -->
-      <div *ngFor="let hlStory of headlineStories;let i=index">
-        <app-story-block 
+      <div
+        *ngFor="let hlStory of headlineStories; let i = index"
+        [ngClass]="{
+          'story-card': true,
+          'main-story-block': hlStory.isMainStory
+        }"
+      >
+        <app-story-block
           [headline]="hlStory.headline"
           [subHeading]="hlStory.subHeading"
           [desc]="hlStory.desc"
           [publishedOn]="hlStory.publishedOn"
           [storyUrl]="hlStory.url"
           [isMainStrory]="hlStory.isMainStory"
-          ></app-story-block>
+        ></app-story-block>
       </div>
     </div>
   </div>

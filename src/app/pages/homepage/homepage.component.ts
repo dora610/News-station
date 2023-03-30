@@ -12,10 +12,11 @@ export class HomepageComponent {
   headlineStories!: NewsCard[];
 
   constructor(private hlStroyServiceService: HeadlineStroyServiceService ){
-    this.headlineStories=hlStroyServiceService.getHeadlineStories();
+    
   }
 
   ngOnInit(){
+    this.headlineStories=this.hlStroyServiceService.getHeadlineStories();
     /* this.headlineStories = [
       {
         headline: 'News Heading 1',
