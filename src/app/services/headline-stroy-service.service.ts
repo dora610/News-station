@@ -1,37 +1,30 @@
 import { Injectable } from '@angular/core';
-import { NewsCard } from '../models/NewsCard';
+import { NewsPreview } from '../models/NewsPreview';
+import { Observable, catchError, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeadlineStroyServiceService {
 
-  headlineStories!: NewsCard[];
+  headlineStories!: NewsPreview[];
+  apiUrl: string = 'http://localhost:8080/api/home/hlstories';
 
-  constructor() { 
-    let mockStory: NewsCard = {
-      headline: 'News Heading 1',
-      subHeading: 'Subtitle',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      url: '/',
-      publishedOn: new Date()
-    }
+  constructor(private http: HttpClient) { }
 
-    this.headlineStories = [];
-
-    for (let i = 0; i < 9; i++) {
-      mockStory.headline = `News Heading ${i+1}`;
-      mockStory['isMainStory'] = i===1 ? true : false;
-      this.headlineStories.push({...mockStory});
-    }
-    
+  fetchHeadlineStories(): Observable<NewsPreview[]>{
+    return this.http.get<NewsPreview[]>(this.apiUrl)
+      .pipe(catchError(this.handleError))
   }
 
-  getHeadlineStories(): NewsCard[]{
-    console.log(this.headlineStories);
-    
-    return this.headlineStories;
-  }
+  private handleError(error: HttpErrorResponse){
+    if(error.status === 0){
+      console.error('An error occurred', error.error);
+    }else{
+      console.error(`Backend returned code ${error.status}, body was: `, error.error);
+    }
 
-  // TODO: create a fetch method for news fetching from api
+    return throwError(() => new Error('Something bad happened; please try again later.'))
+  }
 }

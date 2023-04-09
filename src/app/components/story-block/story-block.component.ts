@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NewsPreview } from 'src/app/models/NewsPreview';
 
 @Component({
   selector: 'app-story-block',
@@ -7,17 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class StoryBlockComponent {
   @Input()
-  headline!:string;
-  @Input()
-  subHeading!: string;
-  @Input()
-  desc!: string;
-  @Input()
-  publishedOn!: Date;
-  @Input()
-  storyUrl!: string;
-  @Input()
-  isMainStrory!: boolean|undefined;
+  newsDetails!: NewsPreview;
 
   ngOninit(){ }
 

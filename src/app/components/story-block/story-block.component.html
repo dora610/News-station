@@ -1,5 +1,9 @@
-<div class="story-card">
-    <h2>{{ headline }}</h2>
-    <p>{{ subHeading }}</p>
-    <p>{{ publishedOn }}</p>
+<div class="story-card-image">
+    <img [src]="'./photos/'+ newsDetails.img" alt="image" srcset="" width="5rem">
+</div>
+<div class="story-card-body">
+    <h2>{{ newsDetails.headline }}</h2>
+    <p>{{ newsDetails.subHeading }}</p>
+    <h6>{{newsDetails.id}}</h6>
+    <p>{{ newsDetails.publishedOn }}</p>
 </div>

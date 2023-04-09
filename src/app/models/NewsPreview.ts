@@ -1,9 +1,10 @@
-export interface NewsCard {
+export interface NewsPreview {
+  id: number;
   headline: string;
   subHeading: string;
-  desc: string;
   img?: string;
   publishedOn: Date;
-  url: string;
   isMainStory?: boolean;
+  author: string,
+  category: string
 }

@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="top-heading">Top heading</h2>
+
+  <div class="stories-grid">
+    <div class="col col-left">
+        <div *ngFor="let story of headlineStories.slice(2, 5)">
+          <app-story-block class="story-block" [newsDetails]="story"></app-story-block>
+        </div>
+      </div>
+
+    <div class="col col-center">
+      <div *ngFor="let story of headlineStories.slice(0,2)">
+        <app-story-block class="story-block" [newsDetails]="story"></app-story-block>
+      </div>
+    </div>
+
+    <div class="col col-right">
+      <div *ngFor="let story of headlineStories.slice(5,8)">
+        <app-story-block class="story-block" [newsDetails]="story"></app-story-block>
+      </div>
+    </div>
+  </div>
+</div>
