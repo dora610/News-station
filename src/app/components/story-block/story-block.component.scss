@@ -1,0 +1,23 @@
+h2, h5, p {
+  margin: 0.8rem 0;
+}
+
+p{
+    color: #475569;
+}
+
+img{
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    // border: 1px solid #dfdfdf;
+}
+
+.headline-story{
+    text-align: center;
+    h2{
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        color: #334155;
+    }
+}
