@@ -3,21 +3,27 @@
 
   <div class="stories-grid">
     <div class="col col-left">
-      <div *ngFor="let story of headlineStories.slice(2, 5)" class="story-block">
-        <app-story-block [story]="story"></app-story-block>
-      </div>
+      <app-story-block
+        *ngFor="let story of headlineStories.slice(2, 5)"
+        class="story-block"
+        [story]="story"
+      ></app-story-block>
     </div>
 
     <div class="col col-center">
-      <div *ngFor="let story of headlineStories.slice(0, 2)" class="story-block">
-        <app-story-block [story]="story"></app-story-block>
-      </div>
+      <app-story-block
+        *ngFor="let story of headlineStories.slice(0, 2)"
+        class="story-block"
+        [story]="story"
+      ></app-story-block>
     </div>
 
     <div class="col col-right">
-      <div *ngFor="let story of headlineStories.slice(5, 8)" class="story-block">
-        <app-story-block [story]="story"></app-story-block>
-      </div>
+      <app-story-block
+        *ngFor="let story of headlineStories.slice(5, 8)"
+        class="story-block"
+        [story]="story"
+      ></app-story-block>
     </div>
   </div>
 </div>
