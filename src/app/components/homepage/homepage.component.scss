@@ -31,11 +31,11 @@
     flex-grow: 3;
     order: 1;
 
-    :first-child{
-        flex-grow: 2;
+    .story-block:first-child{
+        flex-grow: 3;
     }
 
-    :last-child{
+    .story-block:last-child{
         flex-grow: 1;
     }
   }
