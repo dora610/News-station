@@ -6,7 +6,7 @@
       <div *ngFor="let story of headlineStories.slice(2, 5)" class="story-block">
         <!-- <app-story-block class="story-block" [newsDetails]="story"></app-story-block> -->
         <app-card>
-          <img card-image src="'./photos/' + story.img" alt="image" srcset="" width="5rem"/>
+          <img card-image [src]="'/assets/photos/' + story.img" alt="image" srcset="" width="100px"/>
           <div card-body>
             <h2>{{ story.headline }}</h2>
             <p>{{ story.subHeading }}</p>
