@@ -13,13 +13,16 @@
   .col{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 0.8rem;
+    // justify-content: space-between;
 
-    :nth-child(n){
-        border-bottom: 1px solid gray;
+    .story-block:nth-child(n){
+        // border-bottom: 1px solid gray;
+        // TODO: to be removed
+        border: 2px dotted green;
     }
 
-    :last-child{
+    .story-block:last-child{
         border-bottom: 0px;
     }
   }
@@ -45,9 +48,9 @@
     order: 2;
   }
 
-  .story-block {
-    padding: 0.8rem 0.4rem;
-  }
+  // .story-block {
+  //   padding: 0.8rem 0.4rem;
+  // }
 
   /* @media screen and (min-width: 760px) {
     grid-template-columns: repeat(4, minmax(10rem, 1fr));

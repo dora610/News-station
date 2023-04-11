@@ -7,13 +7,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoryBlockComponent } from './components/story-block/story-block.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { CardComponent } from './components/common/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     NavbarComponent,
-    StoryBlockComponent
+    StoryBlockComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
