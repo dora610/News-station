@@ -8,7 +8,7 @@ import { NewsPreview } from 'src/app/models/NewsPreview';
 })
 export class StoryBlockComponent {
   @Input()
-  newsDetails!: NewsPreview;
+  story!: NewsPreview;
 
   ngOninit(){ }
 

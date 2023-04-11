@@ -1,9 +1,16 @@
-<div class="story-card-image">
-    <img [src]="'./photos/'+ newsDetails.img" alt="image" srcset="" width="5rem">
-</div>
-<div class="story-card-body">
-    <h2>{{ newsDetails.headline }}</h2>
-    <p>{{ newsDetails.subHeading }}</p>
-    <h6>{{newsDetails.id}}</h6>
-    <p>{{ newsDetails.publishedOn }}</p>
-</div>
+<app-card>
+  <img
+    card-image
+    [src]="'/assets/photos/' + story.img"
+    alt="image"
+    srcset=""
+    width="100px"
+  />
+  <div card-body>
+    <h2>{{ story.headline }}</h2>
+    <p>{{ story.subHeading }}</p>
+  </div>
+  <div card-footer>
+    Published by: <span>{{ story.author }}</span>
+  </div>
+</app-card>

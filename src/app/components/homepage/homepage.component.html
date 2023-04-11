@@ -4,8 +4,8 @@
   <div class="stories-grid">
     <div class="col col-left">
       <div *ngFor="let story of headlineStories.slice(2, 5)" class="story-block">
-        <!-- <app-story-block class="story-block" [newsDetails]="story"></app-story-block> -->
-        <app-card>
+        <app-story-block [story]="story"></app-story-block>
+        <!-- <app-card>
           <img card-image [src]="'/assets/photos/' + story.img" alt="image" srcset="" width="100px"/>
           <div card-body>
             <h2>{{ story.headline }}</h2>
@@ -14,7 +14,7 @@
           <div card-footer>
             Published by: <span>{{story.author}}</span>
           </div>
-        </app-card>
+        </app-card> -->
       </div>
     </div>
 
@@ -22,7 +22,7 @@
       <div *ngFor="let story of headlineStories.slice(0, 2)">
         <app-story-block
           class="story-block"
-          [newsDetails]="story"
+          [story]="story"
         ></app-story-block>
       </div>
     </div>
@@ -31,7 +31,7 @@
       <div *ngFor="let story of headlineStories.slice(5, 8)">
         <app-story-block
           class="story-block"
-          [newsDetails]="story"
+          [story]="story"
         ></app-story-block>
       </div>
     </div>
