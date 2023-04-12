@@ -6,6 +6,9 @@
   text-transform: uppercase;
   color: #334155;
   border-bottom: 2px solid #94a3b8;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
 .stories-grid {
@@ -22,7 +25,7 @@
     // justify-content: space-between;
 
     .story-block:nth-child(n){
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid #94a3b8;
         padding-top: 1rem;
         padding-bottom: 1rem;
         // background-color: #f8fafc;
@@ -34,16 +37,16 @@
   }
 
   .col-center{
-    flex-grow: 3;
+    flex-grow: 5;
     order: 1;
 
-    .story-block:first-child{
+    /* .story-block:first-child{
         flex-grow: 3;
     }
 
     .story-block:last-child{
         flex-grow: 1;
-    }
+    } */
   }
 
   .col-left{
