@@ -2,6 +2,13 @@ h2, h5, p {
   margin: 0.8rem 0;
 }
 
+h2{
+    font-size: larger;
+    font-weight: 900;
+    line-height: 1em;
+    color: #334155;
+}
+
 p{
     color: #475569;
 }
@@ -9,7 +16,6 @@ p{
 img{
     width: 100%;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-    // border: 1px solid #dfdfdf;
 }
 
 .headline-story{
@@ -18,11 +24,13 @@ img{
         font-size: 2.5rem;
         font-weight: 900;
         margin-bottom: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1em;
         color: #334155;
     }
 
     img{
-        height: 30rem;
+        height: 40rem;
         object-fit: cover;
     }
 }

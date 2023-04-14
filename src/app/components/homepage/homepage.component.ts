@@ -9,6 +9,9 @@ import { HeadlineStroyServiceService } from 'src/app/services/headline-stroy-ser
 })
 export class HomepageComponent {
   headlineStories!: NewsPreview[];
+  colLeftStories!: NewsPreview[];
+  colCenterStories!: NewsPreview[];
+  colRightStories!: NewsPreview[];
 
   constructor(private hlStroyServiceService: HeadlineStroyServiceService ){}
 
@@ -110,6 +113,14 @@ export class HomepageComponent {
 
     // this.hlStroyServiceService.fetchHeadlineStories()
     //   .subscribe((res)=> this.headlineStories = res);
+
+    this.segregateStories()
+  }
+
+  segregateStories(){
+    this.colCenterStories = this.headlineStories.slice(0, 2);
+    this.colLeftStories = this.headlineStories.slice(2, 5);
+    this.colRightStories = this.headlineStories.slice(5, 8);
   }
 
 }

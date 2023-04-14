@@ -1,11 +1,13 @@
-<div class="card-container">
+<div [ngClass]="inlineCard ? 'card-container--inline' : 'card-container'">
   <div class="card-image">
     <ng-content select="[card-image]"></ng-content>
   </div>
-  <div class="card-body">
-    <ng-content select="[card-body]"></ng-content>
-  </div>
-  <div class="card-footer">
-    <ng-content select="[card-footer]"></ng-content>
+  <div [ngClass]="contentCenter ? 'card-content__center' : 'card-content'">
+    <div class="card-body">
+      <ng-content select="[card-body]"></ng-content>
+    </div>
+    <div class="card-footer">
+      <ng-content select="[card-footer]"></ng-content>
+    </div>
   </div>
 </div>

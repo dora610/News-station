@@ -4,7 +4,7 @@
   <div class="stories-grid">
     <div class="col col-left">
       <app-story-block
-        *ngFor="let story of headlineStories.slice(2, 5)"
+        *ngFor="let story of colLeftStories"
         class="story-block"
         [story]="story"
       ></app-story-block>
@@ -12,7 +12,7 @@
 
     <div class="col col-center">
       <app-story-block
-        *ngFor="let story of headlineStories.slice(0, 2)"
+        *ngFor="let story of colCenterStories"
         class="story-block"
         [story]="story"
       ></app-story-block>
@@ -20,7 +20,7 @@
 
     <div class="col col-right">
       <app-story-block
-        *ngFor="let story of headlineStories.slice(5, 8)"
+        *ngFor="let story of colRightStories"
         class="story-block"
         [story]="story"
       ></app-story-block>

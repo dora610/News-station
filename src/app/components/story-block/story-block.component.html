@@ -1,4 +1,4 @@
-<app-card [ngClass]="{'headline-story': story.id===1}">
+<app-card [ngClass]="{ 'headline-story': story.id === 1}" [contentCenter]="story.id===1" [inlineCard]="story.id===2">
   <img
     card-image
     [src]="'/assets/photos/' + story.img"
@@ -9,10 +9,7 @@
   <div card-body>
     <h2>{{ story.headline }}</h2>
     <p>{{ story.subHeading }}</p>
+    <h5>{{ story.author }}</h5>
   </div>
-  <div card-footer>
-    <h5>
-      By: <span>{{ story.author }}</span>
-    </h5>
-  </div>
+  <div card-footer></div>
 </app-card>
