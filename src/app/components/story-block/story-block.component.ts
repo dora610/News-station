@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { NewsPreview } from 'src/app/models/NewsPreview';
 
 @Component({
@@ -6,10 +6,18 @@ import { NewsPreview } from 'src/app/models/NewsPreview';
   templateUrl: './story-block.component.html',
   styleUrls: ['./story-block.component.scss']
 })
-export class StoryBlockComponent {
+export class StoryBlockComponent implements OnInit{
+  
   @Input()
   story!: NewsPreview;
 
-  ngOninit(){ }
+  isCardInline:boolean = false;
+
+  ngOnInit(): void {
+    this.isCardInline = this.story?.id===2 || (window.innerWidth <= 640 && this.story.id!==1)
+
+    console.log(this.isCardInline);
+    
+  }
 
 }

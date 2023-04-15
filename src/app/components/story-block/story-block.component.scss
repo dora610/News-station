@@ -35,7 +35,7 @@ img{
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.5rem;
-        margin: 0 4rem 1rem 4rem;
+        margin: 0 3rem 1rem 3rem;
     }
 
     h5{
@@ -47,7 +47,10 @@ img{
 
     img{
         height: 20rem;
+        // min-height: 10rem;
         width: 100%;
         object-fit: cover;
+
+        
     }
 }

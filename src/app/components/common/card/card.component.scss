@@ -26,14 +26,28 @@
         justify-content: space-between;
         gap: 1.2rem;
 
-        .card-image{
+        .card-image:has(img){
             order: 1;
-            width: 20rem;
+            max-width: 20rem;
+            width: 40%;
+
+            @media (max-width: 640px) {
+                width: 30%;
+            }
         }
 
         .card-content{
             display: flex;
             flex-direction: column;
+            max-width: 60%;
+
+            @media (max-width: 640px) {
+                max-width: 70%;
+            }
+
+            :not:has(.card-image > img){
+                width: 100%;
+            }
         }
     }
 }

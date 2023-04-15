@@ -1,5 +1,6 @@
-<app-card [ngClass]="{ 'headline-story': story.id === 1}" [contentCenter]="story.id===1" [inlineCard]="story.id===2">
+<app-card [ngClass]="{ 'headline-story': story.id === 1}" [contentCenter]="story.id===1" [inlineCard]="isCardInline">
   <img
+    *ngIf="story.img"
     card-image
     [src]="'/assets/photos/' + story.img"
     alt="image"
