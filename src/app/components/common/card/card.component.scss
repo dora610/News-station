@@ -20,20 +20,18 @@
         }
     }
 
-    &--inline{
+    &__inline{
         display: flex;
         width: 100%;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 0.5rem;
+        gap: 1.2rem;
 
         .card-image{
             order: 1;
-            flex-grow: 1;
+            width: 20rem;
         }
 
         .card-content{
-            flex-grow: 4;
             display: flex;
             flex-direction: column;
         }
