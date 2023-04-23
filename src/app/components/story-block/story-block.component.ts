@@ -14,10 +14,8 @@ export class StoryBlockComponent implements OnInit{
   isCardInline:boolean = false;
 
   ngOnInit(): void {
-    this.isCardInline = this.story?.id===2 || (window.innerWidth <= 640 && this.story.id!==1)
-
-    console.log(this.isCardInline);
-    
+    // this.isCardInline = this.story?.id===2 || (window.innerWidth <= 640 && this.story.id!==1)
+    this.isCardInline = this.story?.id===2;
   }
 
 }

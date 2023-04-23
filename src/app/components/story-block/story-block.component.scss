@@ -48,9 +48,25 @@ img{
     img{
         height: 20rem;
         // min-height: 10rem;
-        width: 100%;
+        max-width: 100%;
         object-fit: cover;
+    }
 
-        
+    @media (max-width: 640px){
+        h2, p, h5 {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        h2{
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2rem;
+            margin-top: 1rem;
+        }
+
+        img{
+            height: 10rem;
+        }
     }
 }

@@ -122,8 +122,8 @@ export class HomepageComponent {
     this.colLeftStories = this.headlineStories.slice(2, 5);
     this.colRightStories = this.headlineStories.slice(5, 8);
 
-    this.colLeftStories.slice(-1)[0].img = undefined;    
-    this.colRightStories.slice(-1)[0].img = undefined;    
+    // this.colLeftStories.slice(-1)[0].img = undefined;    
+    // this.colRightStories.slice(-1)[0].img = undefined;    
   }
 
 }

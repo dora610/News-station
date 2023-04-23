@@ -1,3 +1,19 @@
+@mixin card-inline-style($image-width){
+    display: grid;
+    grid-template-columns: 1fr $image-width;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+
+    .card-image{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .card-content{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+}
+
 .card-container{
     display: flex;
     flex-direction: column;
@@ -20,34 +36,37 @@
         }
     }
 
+    @media (max-width: 640px){
+        @include card-inline-style(10rem);
+    }
+
+    // add mixins for inline style
     &__inline{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        gap: 1.2rem;
+        @include card-inline-style(15rem);
 
-        .card-image:has(img){
-            order: 1;
-            max-width: 20rem;
-            width: 40%;
-
-            @media (max-width: 640px) {
-                width: 30%;
-            }
+        @media (max-width: 640px){
+            grid-template-columns: 1fr 10rem;
         }
 
-        .card-content{
+    }
+}
+
+@media (max-width: 640px){
+    .card-container:has(.card-content__center){
+        display: flex;
+        flex-direction: column;
+
+        .card-image{
+            flex-grow: 2;
+        }
+
+        .card-content__center{
+            flex-grow: 3;
             display: flex;
             flex-direction: column;
-            max-width: 60%;
-
-            @media (max-width: 640px) {
-                max-width: 70%;
-            }
-
-            :not:has(.card-image > img){
-                width: 100%;
-            }
+            align-items: flex-end;
+            text-align: left;
+            margin-left: 0;
         }
     }
 }
